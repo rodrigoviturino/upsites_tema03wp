@@ -1,0 +1,175 @@
+.footer {
+    background-color: $gray-900;
+    padding: map-get($spacers, 5) 0;
+
+    @include media-breakpoint-only(xs) {
+        padding: map-get($spacers, 4 ) ;
+    }
+
+    .container {
+        @include media-breakpoint-only(xs) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    // Columns
+
+    &__logo {
+
+        .text {
+            color: $gray-400;
+            text-decoration: none;
+            line-height: 28px;
+            margin-bottom: map-get($spacers, 4);
+            font-weight: $font-weight-normal;
+            font-family: "Nunito", sans-serif;
+            @include responsive-font-size(16);
+        }
+    }
+
+    &__address {
+        @include media-breakpoint-only(xs){
+            margin-bottom: map-get($spacers, 3);
+        }
+
+        .title {
+            color: $white;
+            margin-bottom: map-get($spacers, 3 );
+            font-weight: $font-weight-bold;
+            font-family: "Nunito", sans-serif;
+            @include responsive-font-size(20px);
+        }
+
+        .text {
+            color: $gray-400;
+            margin-bottom: map-get($spacers, 2);
+            line-height: 28px;
+            font-weight: $font-weight-normal;
+            @include responsive-font-size(16px);
+        }
+    }
+
+    &__menu {
+        @include media-breakpoint-only(xs){
+            margin-bottom: map-get($spacers, 4);
+        }
+
+        .title {
+            color: $white;
+            margin-bottom: map-get($spacers, 3 );
+            font-weight: $font-weight-bold;
+            font-family: "Nunito", sans-serif;
+            @include responsive-font-size(20px);
+        }
+
+        ul {
+            // Ajustar Menu Footer Items
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0;
+            height: 139px;
+
+            li {
+                a {
+                    color: $gray-400;
+                    text-decoration: none;
+                    transition: all 0.5s;
+                    line-height: 28px;
+                    font-weight: $font-weight-normal;
+                    font-family: "Nunito", sans-serif;
+                    @include responsive-font-size(16px);
+
+                    &:hover {
+                        transition: all 0.5s;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__newsletter {
+
+        .title {
+            color: $white;
+            margin-bottom: map-get($spacers, 3 );
+            font-weight: $font-weight-bold;
+            font-family: "Nunito", sans-serif;
+            @include responsive-font-size(20px);
+
+            @include media-breakpoint-only(xs) {
+                // text-align: center;
+            }
+        }
+
+        .text {
+            color: $gray-400;
+            text-decoration: none;
+            line-height: 28px;
+            margin-bottom: map-get($spacers, 4);
+            font-weight: $font-weight-normal;
+            font-family: "Nunito", sans-serif;
+            @include responsive-font-size(16);
+
+            @include media-breakpoint-only(xs) {
+                // text-align: center;
+            }
+        }
+
+        form {
+
+
+            .form-group {
+                margin: map-get($spacers, 0);
+                margin-right: map-get($spacers, 2);
+
+            }
+
+            input {
+                padding: 26px 18px;
+                margin-right: 10px;
+                border-radius: 50px;
+                color: $white;
+                border: solid 1px $gray-900;
+                background-color: $gray-800;
+
+                &::-webkit-input-placeholder {
+                    color: $white;
+                 }
+
+                &::-moz-placeholder { 
+                    color: $white;  
+                 }
+                &:-ms-input-placeholder {
+                    color: $white;
+                 }
+
+                &:focus {
+                    background-color: $gray-800;
+                    color: $white;
+                }
+
+            }
+    
+            .btn-newsletter {
+                padding: 15px 25px;
+                border-radius: 50px;
+                transition: all 0.5s;
+                background-color: $purple;
+
+                &:hover {
+                    transition: all 0.5s;
+                    background-color: transparent;
+                    border: solid 1px $purple;
+                }
+            }
+
+        }
+
+    }
+
+
+}
