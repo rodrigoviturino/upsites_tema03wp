@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./theme.min.css">
-    <link rel="stylesheet" href="./fonts/fonts.css">
+    <!-- <link rel="stylesheet" href="./theme.min.css">
+    <link rel="stylesheet" href="./fonts/fonts.css"> -->
     <title>Theme 03</title>
 
     <?php wp_head(); ?>
@@ -20,11 +20,14 @@
         <nav class="navbar navbar-expand-lg navbar-light">
 
         <!-- Logo -->
-            <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-                <?php if( function_exists('the_custom_logo') ) 
-                    the_custom_logo();
-                ?>
-            </a> 
+            <?php 
+                $img_logo = get_theme_mod('up_logo_header') ;
+                    if(get_theme_mod('up_logo_header') ) : 
+            ?>
+                <a class="navbar-brand" href="<?php bloginfo('url');?> ">
+                    <img src="<?= $img_logo ?> " class='img-fluid' alt="Logo Empresa">
+                </a>
+            <?php endif; ?>
         <!-- end Logo -->
 
             <button class="navbar-toggler order-1 order-sm-0 " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,33 +47,6 @@
                     }
                 ?>
 
-                <!-- <ul class="navbar-nav m-auto">
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pages</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Elements</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-
-                </ul> -->
             </div>
 
             <ul class="group-icons d-flex m-0 list-unstyled order-2 order-sm-3">

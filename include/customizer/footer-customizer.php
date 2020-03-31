@@ -4,18 +4,26 @@
 function up_footer_customizer( $wp_customize ) {
  
     // Settings 
+        // Logo
+    $wp_customize->add_setting( 'up_logo_footer', [ 'default' => "" ]);
         // Informações
     $wp_customize->add_setting( 'up_about', [ 'default' => "" ]);
+        // Email
+    $wp_customize->add_setting( 'up_email_footer', ['default' => "" ]);
+    $wp_customize->add_setting( 'up_link_email_footer', ['default' => "" ]);
+        // Phone
+    $wp_customize->add_setting( 'up_tel_footer', ['default' => "" ]);
+    $wp_customize->add_setting( 'up_link_tel_footer', ['default' => "" ]);
     
     $wp_customize->add_setting( 'up_title_endereco', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_endereco', [ 'default' => "" ]);
-
-    $wp_customize->add_setting( 'up_text_email_telefone', [ 'default' => "" ]);
 
     $wp_customize->add_setting( 'up_title_menu', [ 'default' => "" ]);
 
     $wp_customize->add_setting( 'up_title_newsletter', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_text_newsletter', [ 'default' => "" ]);
+    $wp_customize->add_setting( 'up_text_input_newsletter_footer', [ 'default' => "" ]);
+    $wp_customize->add_setting( 'up_text_btn_newsletter_footer', [ 'default' => "" ]);
 
     // $wp_customize->add_setting( 'up_copyright', [ 'default' => "" ]);
 
@@ -32,17 +40,89 @@ function up_footer_customizer( $wp_customize ) {
         'priority' => 2
     ]);
 
-    //Controllers 
+    //Controllers
+        // Logo
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control (
+            $wp_customize,
+
+            'up_logo_footer',
+            [
+                'label' => 'Logo Footer',
+                'section' => 'up_footer_section',
+                'settings' => 'up_logo_footer',
+            ]
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control (
             $wp_customize,
 
             'up_about',
             [
-                'label' => 'Sobre Empresa e Copyright',
+                'label' => 'Sobre Empresa',
                 'section' => 'up_footer_section',
                 'settings' => 'up_about',
                 'type' => 'textarea' ,
+
+            ]
+        )
+    );
+
+    // Email
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_email_footer',
+            [
+                'label' => 'Insira o email',
+                'section' => 'up_footer_section',
+                'settings' => 'up_email_footer',
+                'type' => 'text' ,
+
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_link_email_footer',
+            [
+                'label' => 'Confirme o email',
+                'section' => 'up_footer_section',
+                'settings' => 'up_link_email_footer',
+                'type' => 'text' ,
+
+            ]
+        )
+    );
+    // Telefone
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_link_tel_footer',
+            [
+                'label' => 'Caso tenha o Link do Whatsapp',
+                'section' => 'up_footer_section',
+                'settings' => 'up_link_tel_footer',
+                'type' => 'text' ,
+
+            ]
+        )
+    ); 
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_tel_footer',
+            [
+                'label' => 'Numero Telefone/Whatsapp',
+                'section' => 'up_footer_section',
+                'settings' => 'up_tel_footer',
+                'type' => 'text',
 
             ]
         )
@@ -78,21 +158,7 @@ function up_footer_customizer( $wp_customize ) {
         )
     );
 
-    
-    $wp_customize->add_control(
-        new WP_Customize_Control (
-            $wp_customize,
 
-            'up_text_email_telefone',
-            [
-                'label' => 'Email e Telefone',
-                'section' => 'up_footer_section',
-                'settings' => 'up_text_email_telefone',
-                'type' => 'textarea' ,
-
-            ]
-        )
-    );
 
     $wp_customize->add_control(
         new WP_Customize_Control (
@@ -134,6 +200,35 @@ function up_footer_customizer( $wp_customize ) {
                 'section' => 'up_footer_section',
                 'settings' => 'up_text_newsletter',
                 'type' => 'textarea' ,
+
+            ]
+        )
+    );
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_text_input_newsletter_footer',
+            [
+                'label' => 'Texto Input Newsletter',
+                'section' => 'up_footer_section',
+                'settings' => 'up_text_input_newsletter_footer',
+                'type' => 'text' ,
+
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_text_btn_newsletter_footer',
+            [
+                'label' => 'Texto Botão Newsletter',
+                'section' => 'up_footer_section',
+                'settings' => 'up_text_btn_newsletter_footer',
+                'type' => 'text' ,
 
             ]
         )

@@ -4,51 +4,84 @@
 function up_color_footer_customizer( $wp_customize ) {
  
     // Settings 
+        // Cor Principal Footer
+        $wp_customize->add_setting( 'up_cor_principal_footer', ['default' => "#1e2228" ]);
+            // About
+        $wp_customize->add_setting( 'up_cor_texto_about_footer', ['default' => "#cacaca" ]);
+            // Titulo Empresa
+        $wp_customize->add_setting( 'up_cor_titulo_local_footer', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_texto_local_footer', ['default' => "#cacaca" ]);
 
-        $wp_customize->add_setting( 'up_cor_principal_footer', ['default' => "#030F27" ]);
-    
+            // Email
+        $wp_customize->add_setting( 'up_cor_email_footer', ['default' => "#cacaca" ]);
+        // $wp_customize->add_setting( 'up_link_email_footer', ['default' => "#afafaf" ]);
+        //     // Phone
+        $wp_customize->add_setting( 'up_cor_tel_footer', ['default' => "#cacaca" ]);
+        // $wp_customize->add_setting( 'up_link_phone_footer', ['default' => "#afafaf" ]);
+        
+        // Localização
+        $wp_customize->add_setting( 'up_cor_titulo_local_footer', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_texto_local_footer', ['default' => "#cacaca" ]);
+        
+        // Menu
+        $wp_customize->add_setting( 'up_cor_titulo_menu_footer', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_item_menu_footer', ['default' => "#cacaca" ]);
+        $wp_customize->add_setting( 'up_cor_itens_menu_footer', ['default' => "#343a40" ]);
+        
+        // NewSletter
+        $wp_customize->add_setting( 'up_cor_titulo_newsletter_footer', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_texto_newsletter_footer', ['default' => "#cacaca" ]);
+        // Botões
+            // Input
+        $wp_customize->add_setting( 'up_cor_texto_newsletter_footer', ['default' => "#cacaca" ]);
+        $wp_customize->add_setting( 'up_cor_txt_btn_input_newsletter_footer', ['default' => "#cacaca" ]);
+        $wp_customize->add_setting( 'up_cor_borda_btn_input_newsletter_footer', ['default' => "#343a40" ]);
+            // Send
+        $wp_customize->add_setting( 'up_cor_btn_enviar_send_footer', ['default' => "#6f42c1" ]);
+        $wp_customize->add_setting( 'up_cor_txt_btn_enviar_send_footer', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_borda_btn_input_send_footer', ['default' => "#6f42c1" ]);
+
+
         // Coluna About
-        $wp_customize->add_setting( 'up_cor_text_about_footer', ['default' => "#fff" ]);
+        // $wp_customize->add_setting( 'up_cor_text_about_footer', ['default' => "#fff" ]);
 
-        $wp_customize->add_setting( 'up_cor_icone_telefone_footer', ['default' => "#F35C27" ]);
-        $wp_customize->add_setting( 'up_cor_text_telefone_footer', ['default' => "#8A99C0" ]);
-        $wp_customize->add_setting( 'up_cor_icone_email_footer', ['default' => "#F35C27" ]);
-        $wp_customize->add_setting( 'up_cor_text_email_footer', ['default' => "#8A99C0" ]);
-        $wp_customize->add_setting( 'up_cor_icone_local_footer', ['default' => "#F35C27" ]);
-        $wp_customize->add_setting( 'up_cor_text_local_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_icone_telefone_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_text_telefone_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_icone_email_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_text_email_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_icone_local_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_text_local_footer', ['default' => "#8A99C0" ]);
 
         // Icones Rede Social
-        $wp_customize->add_setting( 'up_cor_icon_face_footer', ['default' => "#8A99C0" ]);
-        $wp_customize->add_setting( 'up_cor_hover_icon_face_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_icon_face_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_icon_face_footer', ['default' => "#F35C27" ]);
 
-        $wp_customize->add_setting( 'up_cor_icon_twitter_footer', ['default' => "#8A99C0" ]);
-        $wp_customize->add_setting( 'up_cor_hover_icon_twitter_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_icon_twitter_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_icon_twitter_footer', ['default' => "#F35C27" ]);
 
-        $wp_customize->add_setting( 'up_cor_icon_linkedin_footer', ['default' => "#8A99C0" ]);
-        $wp_customize->add_setting( 'up_cor_hover_icon_linkedin_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_icon_linkedin_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_icon_linkedin_footer', ['default' => "#F35C27" ]);
 
-        $wp_customize->add_setting( 'up_cor_icon_insta_footer', ['default' => "#8A99C0" ]);
-        $wp_customize->add_setting( 'up_cor_hover_icon_insta_footer', ['default' => "#F35C27" ]);        
+        // $wp_customize->add_setting( 'up_cor_icon_insta_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_icon_insta_footer', ['default' => "#F35C27" ]);        
 
         // Coluna Menu
-        $wp_customize->add_setting( 'up_cor_titulo_menu_footer', ['default' => "#FFF" ]);        
-        $wp_customize->add_setting( 'up_cor_itens_menu_footer', ['default' => "#8A99C0" ]);
-        $wp_customize->add_setting( 'up_cor_hover_itens_menu_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_titulo_menu_footer', ['default' => "#FFF" ]);        
+        // $wp_customize->add_setting( 'up_cor_itens_menu_footer', ['default' => "#8A99C0" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_itens_menu_footer', ['default' => "#F35C27" ]);
         
         // Coluna Newsletter
-        $wp_customize->add_setting( 'up_cor_title_newsletter_footer', ['default' => "#FFF" ]);
-        $wp_customize->add_setting( 'up_cor_button_newsletter_footer', ['default' => "#F35C27" ]);
-        $wp_customize->add_setting( 'up_cor_hover_button_newsletter_footer', ['default' => "#F35C27" ]);
-        $wp_customize->add_setting( 'up_cor_hover_text_button_newsletter_footer', ['default' => "#FFF" ]);
+        // $wp_customize->add_setting( 'up_cor_title_newsletter_footer', ['default' => "#FFF" ]);
+        // $wp_customize->add_setting( 'up_cor_button_newsletter_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_button_newsletter_footer', ['default' => "#F35C27" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_text_button_newsletter_footer', ['default' => "#FFF" ]);
 
-        $wp_customize->add_setting( 'up_cor_fundo_menu', ['default' => "#f7f9fa" ]);
+        // $wp_customize->add_setting( 'up_cor_fundo_menu', ['default' => "#f7f9fa" ]);
         
         // Sessão Copyright
-        $wp_customize->add_setting( 'up_cor_fundo_copyright', ['default' => "#1e2227" ]);
-        $wp_customize->add_setting( 'up_cor_link_copyright', ['default' => "#8a99c0" ]);
-        $wp_customize->add_setting( 'up_cor_hover_link_copyright', ['default' => "#f35c27" ]);
-
-
+        // $wp_customize->add_setting( 'up_cor_fundo_copyright', ['default' => "#1e2227" ]);
+        // $wp_customize->add_setting( 'up_cor_link_copyright', ['default' => "#8a99c0" ]);
+        // $wp_customize->add_setting( 'up_cor_hover_link_copyright', ['default' => "#f35c27" ]);
 
 
     //Sections
@@ -73,140 +106,60 @@ function up_color_footer_customizer( $wp_customize ) {
             ]
         )
     );
-
-    //  Coluna Sobre Empresa
-    $wp_customize->add_control(
+    // Titulo Empresa
+     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_text_about_footer',
+            'up_cor_titulo_local_footer',
 
             [
-                'label' => 'Cor texto sobre Empresa',
+                'label' => 'Cor Titulo Empresa',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_text_about_footer',
+                'settings' => 'up_cor_titulo_local_footer',
+            ]
+        )
+    );
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_texto_local_footer',
+
+            [
+                'label' => 'Cor Texto Localização',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_texto_local_footer',
             ]
         )
     );
 
+        // email
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_fundo_redesocial_footer',
+            'up_cor_email_footer',
 
             [
-                'label' => 'Cor do fundo Topo',
+                'label' => 'Cor Texto Email',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_fundo_redesocial_footer',
+                'settings' => 'up_cor_email_footer',
+            ]
+        )
+    );
+        // Telefone
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_tel_footer',
+
+            [
+                'label' => 'Cor Texto Telefone',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_tel_footer',
             ]
         )
     );
 
-        // Cor Rede Social
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_icon_face_footer',
     
-                [
-                    'label' => 'Cor do Icon do Facebook',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_icon_face_footer',
-                ]
-            )
-        );
-
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_hover_icon_face_footer',
-    
-                [
-                    'label' => 'Cor do Hover Icon do Facebook',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_hover_icon_face_footer',
-                ]
-            )
-        );
-
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_icon_twitter_footer',
-    
-                [
-                    'label' => 'Cor do Icon do Twitter',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_icon_twitter_footer',
-                ]
-            )
-        );
-
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_hover_icon_twitter_footer',
-    
-                [
-                    'label' => 'Cor do Hover Icon do Twitter',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_hover_icon_twitter_footer',
-                ]
-            )
-        );
-
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_icon_linkedin_footer',
-    
-                [
-                    'label' => 'Cor do Icon do Linkedin',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_icon_linkedin_footer',
-                ]
-            )
-        );
-
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_hover_icon_linkedin_footer',
-    
-                [
-                    'label' => 'Cor do Hover Icon do Linkedin',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_hover_icon_linkedin_footer',
-                ]
-            )
-        );
-
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_icon_insta_footer',
-    
-                [
-                    'label' => 'Cor do Icon do Instagram',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_icon_insta_footer',
-                ]
-            )
-        );
-
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control (
-                $wp_customize,
-                'up_cor_hover_icon_insta_footer',
-    
-                [
-                    'label' => 'Cor do Hover Icon do Instagram',
-                    'section' => 'up_color_footer_section',
-                    'settings' => 'up_cor_hover_icon_insta_footer',
-                ]
-            )
-        );
-
-
     // Titulo Menu
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
@@ -230,6 +183,18 @@ function up_color_footer_customizer( $wp_customize ) {
                 'label' => 'Cor dos Itens do Menu',
                 'section' => 'up_color_footer_section',
                 'settings' => 'up_cor_itens_menu_footer',
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_hover_itens_menu_footer',
+
+            [
+                'label' => 'Cor Hover dos Itens do Menu',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_hover_itens_menu_footer',
             ]
         )
     );
