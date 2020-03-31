@@ -4,6 +4,7 @@
 function up_color_footer_customizer( $wp_customize ) {
  
     // Settings 
+        
         // Cor Principal Footer
         $wp_customize->add_setting( 'up_cor_principal_footer', ['default' => "#1e2228" ]);
             // About
@@ -33,13 +34,17 @@ function up_color_footer_customizer( $wp_customize ) {
         $wp_customize->add_setting( 'up_cor_texto_newsletter_footer', ['default' => "#cacaca" ]);
         // Botões
             // Input
-        $wp_customize->add_setting( 'up_cor_texto_newsletter_footer', ['default' => "#cacaca" ]);
         $wp_customize->add_setting( 'up_cor_txt_btn_input_newsletter_footer', ['default' => "#cacaca" ]);
-        $wp_customize->add_setting( 'up_cor_borda_btn_input_newsletter_footer', ['default' => "#343a40" ]);
-            // Send
-        $wp_customize->add_setting( 'up_cor_btn_enviar_send_footer', ['default' => "#6f42c1" ]);
-        $wp_customize->add_setting( 'up_cor_txt_btn_enviar_send_footer', ['default' => "#fff" ]);
-        $wp_customize->add_setting( 'up_cor_borda_btn_input_send_footer', ['default' => "#6f42c1" ]);
+        $wp_customize->add_setting( 'up_cor_btn_input_newsletter_footer', ['default' => "#343a40" ]);
+        $wp_customize->add_setting( 'up_cor_borda_btn_input_newsletter_footer', ['default' => "#1e2228" ]);
+            // Button
+        $wp_customize->add_setting( 'up_cor_btn_enviar_newsletter_footer', ['default' => "#6f42c1" ]);
+        $wp_customize->add_setting( 'up_cor_txt_btn_enviar_newsletter_footer', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_borda_btn_enviar_newsletter_footer', ['default' => "#6f42c1" ]);    
+        // Hover Button 
+        $wp_customize->add_setting( 'up_cor_hover_btn_enviar_newsletter_footer', ['default' => "#5720bb00" ]);
+        $wp_customize->add_setting( 'up_cor_hover_txt_btn_enviar_newsletter_footer', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_hover_borda_btn_enviar_newsletter_footer', ['default' => "#6f42c1" ]);    
 
 
         // Coluna About
@@ -92,7 +97,6 @@ function up_color_footer_customizer( $wp_customize ) {
 
 
     //Controllers 
-
      // Color Background
      $wp_customize->add_control(
         new WP_Customize_Color_Control (
@@ -103,6 +107,18 @@ function up_color_footer_customizer( $wp_customize ) {
                 'label' => 'Cor Background Footer',
                 'section' => 'up_color_footer_section',
                 'settings' => 'up_cor_principal_footer',
+            ]
+        )
+    );
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_texto_about_footer',
+
+            [
+                'label' => 'Cor Sobre Empresa e Copyright',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_texto_about_footer',
             ]
         )
     );
@@ -198,191 +214,145 @@ function up_color_footer_customizer( $wp_customize ) {
             ]
         )
     );
-
+    // NewSletter
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_hover_itens_menu_footer',
+            'up_cor_titulo_newsletter_footer',
 
             [
-                'label' => 'Cor Hover dos Itens do Menu',
+                'label' => 'Cor Titulo Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_hover_itens_menu_footer',
-            ]
-        )
-    );
-
-
-    // Cor Icone Telefone
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_icone_telefone_footer',
-
-            [
-                'label' => 'Cor do icone do telefone',
-                'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_icone_telefone_footer',
+                'settings' => 'up_cor_titulo_newsletter_footer',
             ]
         )
     );
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_text_telefone_footer',
+            'up_cor_texto_newsletter_footer',
 
             [
-                'label' => 'Cor da texto do telefone',
+                'label' => 'Cor Texto Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_text_telefone_footer',
+                'settings' => 'up_cor_texto_newsletter_footer',
             ]
         )
     );
-    // Cor Icone Email
+    // Input Newsletter
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_icone_email_footer',
+            'up_cor_btn_input_newsletter_footer',
 
             [
-                'label' => 'Cor do icone do email',
+                'label' => 'Cor Input Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_icone_email_footer',
-            ]
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_text_email_footer',
-
-            [
-                'label' => 'Cor da texto do email',
-                'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_text_email_footer',
-            ]
-        )
-    );
-    // Cor Icone Local
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_icone_local_footer',
-
-            [
-                'label' => 'Cor do icone do local',
-                'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_icone_local_footer',
+                'settings' => 'up_cor_btn_input_newsletter_footer',
             ]
         )
     );
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_text_local_footer',
+            'up_cor_txt_btn_input_newsletter_footer',
 
             [
-                'label' => 'Cor da texto do local',
+                'label' => 'Cor Texto Input Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_text_local_footer',
+                'settings' => 'up_cor_txt_btn_input_newsletter_footer',
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_borda_btn_input_newsletter_footer',
+
+            [
+                'label' => 'Cor Borda do Input Newsletter',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_borda_btn_input_newsletter_footer',
             ]
         )
     );
     
-    
-    // Coluna Newsletter
+    // Button Newsletter
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_title_newsletter_footer',
+            'up_cor_btn_enviar_newsletter_footer',
 
             [
-                'label' => 'Cor do Titulo Newsletter',
+                'label' => 'Cor Botão Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_title_newsletter_footer',
+                'settings' => 'up_cor_btn_enviar_newsletter_footer',
             ]
         )
     );
-
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_button_newsletter_footer',
+            'up_cor_txt_btn_enviar_newsletter_footer',
 
             [
-                'label' => 'Cor do Botão',
+                'label' => 'Cor Texto Botão Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_button_newsletter_footer',
+                'settings' => 'up_cor_txt_btn_enviar_newsletter_footer',
             ]
         )
     );
-
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_hover_button_newsletter_footer',
+            'up_cor_borda_btn_enviar_newsletter_footer',
 
             [
-                'label' => 'Cor do Hover do Botão',
+                'label' => 'Cor Borda do Botão Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_hover_button_newsletter_footer',
-            ]
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_hover_text_button_newsletter_footer',
-
-            [
-                'label' => 'Cor do Texto Hover do Botão',
-                'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_hover_text_button_newsletter_footer',
-            ]
-        )
-    );
-
-    // Sessão Copyright
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_fundo_copyright',
-
-            [
-                'label' => 'Cor do fundo Copyright',
-                'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_fundo_copyright',
+                'settings' => 'up_cor_borda_btn_enviar_newsletter_footer',
             ]
         )
     );
     
+    // Hover Button
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_link_copyright',
+            'up_cor_hover_btn_enviar_newsletter_footer',
 
             [
-                'label' => 'Cor dos links do copyright',
+                'label' => 'Cor Hover Botão Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_link_copyright',
+                'settings' => 'up_cor_hover_btn_enviar_newsletter_footer',
             ]
         )
     );
-
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_hover_link_copyright',
+            'up_cor_hover_txt_btn_enviar_newsletter_footer',
 
             [
-                'label' => 'Cor do hover dos links do copyright',
+                'label' => 'Cor Hover Texto Botão Newsletter',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_hover_link_copyright',
+                'settings' => 'up_cor_hover_txt_btn_enviar_newsletter_footer',
             ]
         )
     );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_hover_borda_btn_enviar_newsletter_footer',
 
+            [
+                'label' => 'Cor Hover Borda do Botão Newsletter',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_hover_borda_btn_enviar_newsletter_footer',
+            ]
+        )
+    );
+    
 
 
 }

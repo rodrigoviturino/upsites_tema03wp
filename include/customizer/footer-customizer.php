@@ -4,8 +4,8 @@
 function up_footer_customizer( $wp_customize ) {
  
     // Settings 
-        // Logo
-    $wp_customize->add_setting( 'up_logo_footer', [ 'default' => "" ]);
+        
+    $wp_customize->add_setting( 'up_about', [ 'default' => "" ]);
         // Informações
     $wp_customize->add_setting( 'up_about', [ 'default' => "" ]);
         // Email
@@ -40,27 +40,14 @@ function up_footer_customizer( $wp_customize ) {
         'priority' => 2
     ]);
 
-    //Controllers
-        // Logo
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control (
-            $wp_customize,
-
-            'up_logo_footer',
-            [
-                'label' => 'Logo Footer',
-                'section' => 'up_footer_section',
-                'settings' => 'up_logo_footer',
-            ]
-        )
-    );
+    //Controllers 
     $wp_customize->add_control(
         new WP_Customize_Control (
             $wp_customize,
 
             'up_about',
             [
-                'label' => 'Sobre Empresa',
+                'label' => 'Sobre Empresa e Copyright',
                 'section' => 'up_footer_section',
                 'settings' => 'up_about',
                 'type' => 'textarea' ,
@@ -68,7 +55,6 @@ function up_footer_customizer( $wp_customize ) {
             ]
         )
     );
-
     // Email
     $wp_customize->add_control(
         new WP_Customize_Control (

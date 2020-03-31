@@ -4,7 +4,10 @@
 function up_color_header_customizer( $wp_customize ) {
  
     // Settings 
+        // Menu Mobile
+        $wp_customize->add_setting( 'up_cor_menumobile_header', ['default' => "#fff" ]);
 
+        // Background Header
         $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "#00000000)" ]);
 
         // Menu
@@ -36,6 +39,19 @@ function up_color_header_customizer( $wp_customize ) {
 
 
     //Controllers 
+        // Menu Mobile
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control (
+                $wp_customize,
+                'up_cor_menumobile_header',
+                [
+                    'label' => 'Cor Menu Mobile Header',
+                    'section' => 'up_color_header_section',
+                    'settings' => 'up_cor_menumobile_header',
+                ]
+            )
+        );
+
     // Background Header
     $wp_customize->add_control(
         new WP_Customize_Color_Control (

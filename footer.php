@@ -119,6 +119,10 @@
 <!-- end Scripts -->
 
 <style type="text/css">
+    /** Icone do Menu Mobile */
+    .header .navbar .navbar-toggler {
+        background-color: <?= get_theme_mod( 'up_cor_menumobile_header' ); ?>;
+    }
     .header{
         background-color: <?= get_theme_mod( 'up_cor_principal_header' ); ?>;
     }
@@ -207,7 +211,11 @@
     .footer__newsletter form .btn-newsletter {
         background-color: <?= get_theme_mod('up_cor_btn_enviar_newsletter_footer'); ?>;
         color: <?= get_theme_mod('up_cor_txt_btn_enviar_newsletter_footer'); ?>;
-        border-color: <?= get_theme_mod('up_cor_txt_btn_enviar_newsletter_footer'); ?>;
+        border-color: <?= get_theme_mod('up_cor_borda_btn_enviar_newsletter_footer'); ?>;
+    }
+    .footer__newsletter form .btn-newsletter:hover {
+        color: <?= get_theme_mod('up_cor_hover_txt_btn_enviar_newsletter_footer'); ?>;
+        border-color: <?= get_theme_mod('up_cor_hover_borda_btn_enviar_newsletter_footer'); ?>;
     }
 
 </style>
