@@ -16,6 +16,10 @@
         background-color: $gray-600;
         position: fixed;
         top: map-get($spacers, 0);
+
+        .navbar {
+            padding: map-get($spacers, 2) 0;
+        }
     }
     
     .navbar {
