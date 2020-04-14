@@ -47,18 +47,6 @@
 
             </div>
 
-            <ul class="group-icons d-flex m-0 list-unstyled order-2 order-sm-3">
-
-                <li class="pr-3">
-                    <i class="fas fa-search"></i>
-                </li>
-
-                <li>
-                    <i class="fas fa-info-circle"></i>
-                </li>
-
-            </ul>
-
 
         </nav>
         
