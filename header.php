@@ -32,8 +32,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse order-3 order-sm-2" id="navbarSupportedContent">
-                <?php 
+            <?php 
+                $position = get_theme_mod('up_select_menu'); 
+                if( $position ) : ?>
+                    <div class="collapse navbar-collapse order-3 order-sm-2 justify-content-<?=$position ?>" id="navbarSupportedContent" >
+                <?php endif; ?> 
+
+                <?php
                     if( has_nav_menu('main-menu') ) {
                         wp_nav_menu([
                             'theme_location' => 'main-menu',

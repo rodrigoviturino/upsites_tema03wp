@@ -6,6 +6,9 @@ function up_header_customizer( $wp_customize ) {
     // Logo
     $wp_customize->add_setting('up_logo_header', ['default' => '']);
 
+    // SELECT
+    $wp_customize->add_setting('up_select_menu', ['default' => 'start']);
+
     // Settings
     // $wp_customize->add_setting('up_telefone', ['default' => '']);
     // $wp_customize->add_setting('up_email', ['default' => '']);
@@ -35,6 +38,26 @@ function up_header_customizer( $wp_customize ) {
                     'section' => 'up_header_section',
                     'settings' => 'up_logo_header'
                 ]
+        )
+    );
+    // SELECT 
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_select_menu',
+            [
+                'label' => 'Posição do menu',
+                'section' => 'up_header_section',
+                'settings' => 'up_select_menu',
+                'type' => 'select',
+                'choices' => array(
+                    'start' => 'start',
+                    'center' => 'center',
+                    'end' => 'end',
+                ),
+
+            ]
         )
     );
 
