@@ -22,9 +22,9 @@
 
             <!-- About e Copyright -->
                 <p class="text">
-                    &copy; <?php echo Date('Y'); ?>
-                    <?php if (get_theme_mod('up_about') ) : ?>
-                        <?php echo get_theme_mod('up_about'); ?>
+                    <?php if (get_theme_mod('up_linha1_about') || get_theme_mod('up_linha1_about') ) : ?>
+                        <?= get_theme_mod('up_linha1_about'); ?> <br>
+                        <?= get_theme_mod('up_linha2_about'); ?> &copy; <?= Date('Y'); ?>
                     <?php endif; ?>
                 </p>
             <!-- end About e Copyright -->
